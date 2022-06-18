@@ -1,4 +1,5 @@
 import { useEffect, useState, useMemo } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './mainPage.css';
 import Header from './header';
 
@@ -34,9 +35,21 @@ function App()
 
 
   return (
-    <div className="container">
-      <Header subtitle="providing houses all over the world" />
-    </div >
+    <Router>
+      <div className='container'>
+        <Header subtitle="Providing houses all over the world" />
+
+        <Switch>
+          <Route path="/">
+
+          </Route>
+        </Switch>
+
+
+
+      </div>
+    </Router>
+
   );
 }
 
