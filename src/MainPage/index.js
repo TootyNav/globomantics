@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import './mainPage.css';
 import Header from './header';
 
@@ -20,7 +20,17 @@ function App()
     };
   }, []);
 
+  //cache the house values so the picked random option is not refreshed.  
+  const featuredHouse = useMemo(() =>
+  {
 
+    if (allHouses.length)
+    {
+      const randomIndex = Math.floor(Math.random() * allHouses.length);
+      return allHouses[randomIndex];
+    }
+
+  }, [allHouses]);
 
 
   return (
