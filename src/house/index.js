@@ -1,10 +1,8 @@
 import "./house.css";
 
-const House = ({ house }) => {
-  const [inquiryShown, setInquiryShown] = useState(false);
-  const inquiryClick = () => {
-    setInquiryShown(!inquiryShown);
-  };
+const House = ({ house }) =>
+{
+
   return (
     <div>
       <div className="row mt-2">
