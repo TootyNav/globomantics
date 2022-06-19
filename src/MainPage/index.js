@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './mainPage.css';
 import Header from './header';
 import FeaturedHouse from './featured-house';
+import SearchResults from "../search-results";
+import HouseFilter from "./house-filter";
 
 function App()
 {
@@ -39,8 +41,13 @@ function App()
     <Router>
       <div className='container'>
         <Header subtitle="Providing houses all over the world" />
+        <HouseFilter allHouses={allHouses} />
 
         <Switch>
+          <Route path="/searchresults/:country">
+            <SearchResults allHouses={allHouses} />
+          </Route>
+
           <Route path="/">
 
             <FeaturedHouse house={featuredHouse} />
