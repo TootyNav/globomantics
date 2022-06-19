@@ -1,6 +1,25 @@
 
 https://app.pluralsight.com/library/courses/react-practical-start/exercise-files
 
+Routes
+Hooks : useEffects, useState, UseMemo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
