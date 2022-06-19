@@ -2,6 +2,7 @@ import { useEffect, useState, useMemo } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './mainPage.css';
 import Header from './header';
+import FeaturedHouse from './featured-house';
 
 
 function App()
@@ -41,7 +42,7 @@ function App()
 
         <Switch>
           <Route path="/">
-
+            <FeaturedHouse house={featuredHouse} />
           </Route>
         </Switch>
 
